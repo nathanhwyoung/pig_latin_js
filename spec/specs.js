@@ -26,4 +26,8 @@ describe('piglatin', function() {
     it("moves the 'u' along with the 'q' if the 2nd and 3rd consonants include 'qu'", function() {
         expect(piglatin('squeal')).to.equal('ealsquay');
     });
+
+    it("treats y as a consonant", function() {
+        expect(piglatin('your')).to.equal('ouryay');
+    });
 });
