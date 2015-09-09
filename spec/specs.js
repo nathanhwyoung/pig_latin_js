@@ -30,4 +30,9 @@ describe('piglatin', function() {
     it("treats y as a consonant", function() {
         expect(piglatin('your')).to.equal('ouryay');
     });
+
+    it("handles multi-word strings", function() {
+        expect(piglatin('Hello there')).to.equal('elloHay erethay');
+    });
+
 });
