@@ -1,4 +1,4 @@
-# Palindromes
+# Pig Latin Translator
 
 ##### A web page that identifies if a word, phrase, number, or other sequence of characters is a palindrome. (9/9/15)
 

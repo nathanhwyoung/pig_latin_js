@@ -23,7 +23,7 @@ describe('piglatin', function() {
         expect(piglatin('Queen')).to.equal('eenQuay');
     });
 
-    it("moves the 'u' along with the 'q' if the any consonants include 'qu'", function() {
+    it("moves the 'u' along with the 'q' if the 2nd and 3rd consonants include 'qu'", function() {
         expect(piglatin('squeal')).to.equal('ealsquay');
     });
 });
