@@ -6,25 +6,70 @@ var vowelTester = function(string, integer) {
     var vowel = false;
 
     for (var i = 0, len = vowels.length; i < len; i++) {
-        if (array[0] === vowels[i]) {
+        if (array[integer] === vowels[i]) {
             vowel = true;
         }
     }
-
     return vowel;
 }
 
 var piglatin = function(input) {
     if (!/\s/.test(input)) {
-        var result = vowelTester(input, 0);
+        var array = input.split("");
 
-        if (result) {
-            var array = input.split("");
+        debugger;
+
+        if ((array[0] === ('q', 'Q')) && (array[1] === 'u')) {
+            array.push(array.shift());
+            array.push(array.shift());
             array.push('a', 'y');
-            console.log(array);
             var word = array.join('');
+            return word;
+            } else if ((array[1] === ('q', 'Q')) && (array[2] === 'u')) {
+                array.push(array.shift());
+                array.push(array.shift());
+                array.push(array.shift());
+                array.push('a', 'y');
+                var word = array.join('');
+                return word;
+            } else
+                if (vowelTester(input, 0)) {
+                    var array = input.split("");
+                    array.push('a', 'y');
+                    var word = array.join('');
+                    return word;
+                } else if (vowelTester(input, 1)) {
+                    var array = input.split("");
+                    array.push(array.shift());
+                    array.push('a', 'y');
+                    var word = array.join('');
+                    return word;
+                } else if (vowelTester(input, 2)) {
+                    var array = input.split("");
+                    array.push(array.shift());
+                    array.push(array.shift());
+                    array.push('a', 'y');
+                    var word = array.join('');
+                    return word;
+                } else if (vowelTester(input, 3)) {
+                    var array = input.split("");
+                    array.push(array.shift());
+                    array.push(array.shift());
+                    array.push(array.shift());
+                    array.push('a', 'y');
+                    var word = array.join('');
+                    return word;
+                } else
+                    var array = input.split("");
+                    array.push(array.shift());
+                    array.push(array.shift());
+                    array.push(array.shift());
+                    array.push(array.shift());
+                    array.push('a', 'y');
+                    var word = array.join('');
+                    return word;
+
         }
-    } return word;
 };
 
 // $(document).ready(function() {
