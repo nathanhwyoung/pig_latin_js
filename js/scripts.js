@@ -8,11 +8,6 @@ var vowelTester = function(string, integer) {
     for (var i = 0, len = vowels.length; i < len; i++) {
         if (array[0] === vowels[i]) {
             vowel = true;
-
-            //PROBLEM HERE
-            console.log(vowel);
-        } else {
-            vowel = false;
         }
     }
 
@@ -26,11 +21,11 @@ var piglatin = function(input) {
         if (result) {
             var array = input.split("");
             array.push('a', 'y');
+            console.log(array);
+            var word = array.join('');
         }
-    } return array;
+    } return word;
 };
-
-
 
 // $(document).ready(function() {
 //   $("form#palindrome").submit(function(event) {
