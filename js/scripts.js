@@ -1,21 +1,33 @@
+var vowelTester = function(string, integer) {
+    //receives a word and an index number and returns true if that spot in the word is a vowel
+    var array = string.split("");
+
+    var vowels = ['a','e','i','o','u','A','E','I','O','U'];
+    var vowel = false;
+
+    for (var i = 0, len = vowels.length; i < len; i++) {
+        if (array[0] === vowels[i]) {
+            vowel = true;
+
+            //PROBLEM HERE
+            console.log(vowel);
+        } else {
+            vowel = false;
+        }
+    }
+
+    return vowel;
+}
+
 var piglatin = function(input) {
     if (!/\s/.test(input)) {
-        var array = input.split("");
-        var vowels = ['a','e','i','o','u','A','E','I','O','U'];
-        var vowelTester = false;
-        for (var i = 0, len = vowels.length; i < len; i++) {
-            if (array[0] === vowels[i]) {
-                vowelTester = true;
-            }
-        }
+        var result = vowelTester(input, 0);
 
-        if (vowelTester = true) {
+        if (result) {
+            var array = input.split("");
             array.push('a', 'y');
         }
-        var string = array.join('');
-        console.log(string);
-        return string;
-    }
+    } return array;
 };
 
 
