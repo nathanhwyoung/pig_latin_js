@@ -85,19 +85,14 @@ var piglatin = function(input) {
 
 };
 
-// $(document).ready(function() {
-//   $("form#palindrome").submit(function(event) {
-//     var input = $("input#input").val();
-//     var result = palindrome(input);
-//
-//     $(".input").text(input);
-//     if (!result) {
-//       $(".not").text("not");
-//     } else {
-//         $(".not").empty();
-//     }
-//
-//     $("#result").show();
-//     event.preventDefault();
-//   });
-// });
+$(document).ready(function() {
+    $("form#piglatin").submit(function(event) {
+        var input = ($("input#input").val());
+        var result = piglatin(input);
+
+        $(".output").text(result);
+
+        $("#result").show();
+        event.preventDefault();
+    });
+});
